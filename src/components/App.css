@@ -1,0 +1,10 @@
+.body {
+  position: absolute;
+  top: 5rem;
+  left: 30rem;
+}
+
+.taxonomyTitle {
+  font: message-box;
+  font-weight: 700;
+}

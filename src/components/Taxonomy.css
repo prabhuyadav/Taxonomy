@@ -1,0 +1,33 @@
+.colorBox {
+  position: relative;
+  right: 35px;
+  width: 30px;
+  height: 17px;
+  margin-left: 15px;
+  border-radius: 20%;
+}
+
+.name {
+  position: relative;
+  right: 35px;
+  font: message-box;
+  font-size: 17px;
+  font-weight: 600;
+  width: 80px;
+  margin: 0 45px 0 15px;
+}
+
+.taxonomy {
+  width: 250px;
+  height: 40px;
+  border: 1px solid #eaecec;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.taxonomyContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0.6rem;
+}
