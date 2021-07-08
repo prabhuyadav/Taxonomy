@@ -1,4 +1,3 @@
-import "./Taxonomies.css";
 import React from "react";
 import Taxonomy from "./Taxonomy";
 
