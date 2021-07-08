@@ -1,5 +1,5 @@
 // Nested Taxonomy
-export const nestedTaxonomy = [
+export const taxonomyData = [
   {
     name: "object",
     classId: 0,
@@ -36,17 +36,17 @@ export const nestedTaxonomy = [
 ];
 
 // Completely flat taxonomy
-export const flatTaxonomy = [
-  {
-    name: "flatObject",
-    classId: 0,
-    children: [
-      { name: "chair", classId: 1, children: [] },
-      { name: "table", classId: 2, children: [] },
-      { name: "computer", classId: 3, children: [] },
-      { name: "bed", classId: 4, children: [] },
-      { name: "glass", classId: 5, children: [] },
-      { name: "television", classId: 6, children: [] },
-    ],
-  },
-];
+// export const flatTaxonomy = [
+//   {
+//     name: "flatObject",
+//     classId: 0,
+//     children: [
+//       { name: "chair", classId: 1, children: [] },
+//       { name: "table", classId: 2, children: [] },
+//       { name: "computer", classId: 3, children: [] },
+//       { name: "bed", classId: 4, children: [] },
+//       { name: "glass", classId: 5, children: [] },
+//       { name: "television", classId: 6, children: [] },
+//     ],
+//   },
+// ];

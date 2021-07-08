@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { nestedTaxonomy } from "../utils/TaxonomyData";
+import { taxonomyData } from "../utils/TaxonomyData";
 import Taxonomies from "./Taxonomies";
 
 class App extends React.Component {
@@ -8,10 +8,14 @@ class App extends React.Component {
     return (
       <div className="body">
         <h3 className="taxonomyTitle">Full Taxonomy List Component</h3>
-        <Taxonomies taxonomyList={nestedTaxonomy} nestingLevel={0} />
+        <Taxonomies taxonomyList={taxonomyData} nestingLevel={0} />
       </div>
     );
   }
 }
 
 export default App;
+
+// Import the data you wanna display against taxonomyData variable in TaxonomyData.js whether it be flatTaxonomy or a nestedTaxonomy
+
+// by default i put the nestedTaxonomy object in the git red brick assignment repo as the taxonomyData
