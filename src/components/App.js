@@ -4,11 +4,21 @@ import { taxonomyData } from "../utils/TaxonomyData";
 import Taxonomies from "./Taxonomies";
 
 class App extends React.Component {
+  state = { selectedTaxonomy: undefined };
+  onSelectedChange = (e) => {
+    const selectedTaxonomy = e.target.closest(".taxonomy");
+    const nameEl = selectedTaxonomy.querySelector(".name");
+    this.setState({ selectedTaxonomy: nameEl.textContent });
+  };
   render() {
     return (
-      <div className="body">
+      <div onClick={this.onSelectedChange} className="body">
         <h3 className="taxonomyTitle">Full Taxonomy List Component</h3>
-        <Taxonomies taxonomyList={taxonomyData} nestingLevel={0} />
+        <Taxonomies
+          taxonomyList={taxonomyData}
+          nestingLevel={0}
+          selected={this.state.selectedTaxonomy}
+        />
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React from "react";
 import Taxonomy from "./Taxonomy";
 
-const Taxonomies = ({ taxonomyList, nestingLevel }) => {
+const Taxonomies = ({ taxonomyList, nestingLevel, selected }) => {
   if (taxonomyList.length === 0) {
     return <div></div>;
   }
@@ -12,6 +12,7 @@ const Taxonomies = ({ taxonomyList, nestingLevel }) => {
         key={taxonomy.classId}
         taxonomy={taxonomy}
         nestingLevel={nestingLevel}
+        selected={selected}
       />
     );
   });

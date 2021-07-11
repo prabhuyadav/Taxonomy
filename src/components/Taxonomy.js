@@ -4,19 +4,12 @@ import Taxonomies from "./Taxonomies";
 import { stringToColor } from "../utils/ColorGenerator";
 
 class Taxonomy extends React.Component {
-  state = { backgroundColor: "white" };
-
-  onSelection = () => {
-    if (this.state.backgroundColor !== "white") {
-      this.setState({ backgroundColor: "white" });
-    } else {
-      const backgroundColor = "aliceblue";
-      this.setState({ backgroundColor });
-    }
-  };
-
   render() {
     const taxonomy = this.props.taxonomy;
+    let color = "white";
+    if (this.props.selected === taxonomy.name) {
+      color = "aliceblue";
+    }
     const nestingLevel = this.props.nestingLevel;
     let positionIndent = "";
     if (nestingLevel > 2) {
@@ -26,11 +19,7 @@ class Taxonomy extends React.Component {
     const hexCode = stringToColor(taxonomy.name);
     return (
       <div>
-        <div
-          onClick={this.onSelection}
-          className="taxonomy"
-          style={{ backgroundColor: this.state.backgroundColor }}
-        >
+        <div style={{ backgroundColor: color }} className="taxonomy">
           <div className="taxonomyContent" style={{ left: positionIndent }}>
             <div
               className="colorBox"
@@ -42,6 +31,7 @@ class Taxonomy extends React.Component {
         <Taxonomies
           taxonomyList={taxonomy.children}
           nestingLevel={nestingLevel}
+          selected={this.props.selected}
         />
       </div>
     );
